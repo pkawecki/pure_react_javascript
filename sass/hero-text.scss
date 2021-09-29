@@ -1,4 +1,4 @@
-$golden-logo: #fed136;
+@import './globals.scss';
 
 .hero-text{
     >*{
@@ -40,12 +40,12 @@ $golden-logo: #fed136;
     }
 
     :nth-child(1){
-        font: 40px 'Roboto' ;
-
+        font: 35px 'Roboto' ;
+        margin-bottom: 20px;
         
     }
     :nth-child(2){
-        font: 70px 'Montserrat';
+        font: 50px 'Montserrat';
         text-transform: uppercase;
     }
     

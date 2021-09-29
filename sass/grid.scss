@@ -1,4 +1,5 @@
-$max-width: 950px;
+@import './globals.scss';
+
 
 .container{
     display: grid;
@@ -6,9 +7,11 @@ $max-width: 950px;
     max-width: $max-width;
     min-height: 50vh;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas: "main-header main-header main-header"
-    "content1 content2 content3";
+    grid-template-rows: auto 1fr ;
+    grid-template-areas: 
+    "main-header main-header main-header"
+    "content1 content2 content3"
+    "content4 content5 content6";
     align-items: center;
 
     >*{
@@ -16,9 +19,52 @@ $max-width: 950px;
     }
 }
 
+.portfolio{
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );    
+    justify-items: center;
+    .s-content{
+        display: flex;
+        flex-direction: column;
+        max-width: 270px;
+
+    }
+}
+
+@media only screen and (max-width:760px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr 1fr 1fr;
+        grid-template-areas: 
+            "main-header" 
+            "content1"
+            "content2"
+            "content3"
+            "content4"
+            "content5"
+            "content6";
+        justify-items: center;
+        >*{
+            max-width: 450px;
+            
+        }
+    }
+}
+
 #main-header{
     margin: 4rem 0 ;
     grid-area: main-header;
+    
+    >h1{
+        font-family: 'Montserrat';
+        text-transform: uppercase;
+        padding:0px 15px;
+    }
+    >p{
+        font-family: 'Roboto Slab';
+        font-size: 1rem;
+        color: $dark-gray;
+    }
+
 }
 #content1{
     grid-area: content1;
@@ -32,16 +78,18 @@ $max-width: 950px;
 
 .s-content{
     
-    margin: 0 20px;
+    margin: 0 20px 40px;
     >*{
         margin: 10px 0;
     }
     h2{
         font-family: 'Montserrat';
+        font-size: 1rem;
     }
     p{
         font-family: 'Roboto Slab';
-        color: rgb(70, 66, 66);
+        color: $dark-gray;
+        font-size: .75rem;
     }
 }
 

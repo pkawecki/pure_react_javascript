@@ -1,0 +1,40 @@
+@import './globals.scss';
+
+footer{
+    max-width: $max-width;
+    margin: 50px auto ;
+    position: relative;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    >*{
+        position: absolute;
+        display: inline-block;
+        
+    }
+    span{
+        margin-left: 20px;
+        left: 0;
+        font-family: 'Montserrat';
+    }
+
+    .social-media{
+        left: 50%;
+        transform: translateX(-50%);
+        
+        a{
+            color: black;
+        }
+    }
+    
+}
+@media only screen and(max-width: 760px){
+    footer{
+        position: static;
+        justify-content: space-evenly;
+        >*{
+            position: static;
+            
+        }
+    }
+}

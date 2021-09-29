@@ -1,17 +1,9 @@
 @import './hero-text.scss';
 @import './grid.scss';
-
+@import './footer.scss';
+@import './globals.scss';
 /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
-
-
-
-
-// Colors
-$golden-logo: #fed136;
-
-//Metrics
-$max-width: 950px;
 
 
 * {
@@ -24,13 +16,22 @@ html {
     font-size: 16px;
 }
 
-.header-hero {
-    background-image: url("../images/background.png");
-    background-size:contain;
+.color-wrapper {
+    background: $background-gray;
+}
+
+.width-wrapper {
     max-width: $max-width;
     margin: 0 auto;
+}
+
+.header-hero {
+    background-image: url("../images/background.png");
+    background-size:cover;
+    // max-width: $max-width;
+    margin: 0 auto;
     padding-bottom: 50px;
-    // height: 100vh;
+    height: 100vh;
     // max-height: 400px;
 }
 

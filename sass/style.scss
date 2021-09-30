@@ -2,50 +2,37 @@
 @import './grid.scss';
 @import './footer.scss';
 @import './globals.scss';
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
+@import './general_styling.scss';
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */
 
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
+.nav-toggle-label, .nav-toggle{
+    position: absolute;
+    display: none;
 }
-
-html {
-    font-size: 16px;
-}
-
-.color-wrapper {
-    background: $background-gray;
-}
-
-.width-wrapper {
-    max-width: $max-width;
-    margin: 0 auto;
-}
-
-.header-hero {
-    background-image: url("../images/background.png");
-    background-size:cover;
-    // max-width: $max-width;
-    margin: 0 auto;
-    padding-bottom: 50px;
-    height: 100vh;
-    // max-height: 400px;
-}
-
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     padding: 40px 0;
+    
+    
+    .golden-logo {
+
+        font-family: 'Oleo Script', cursive;
+        font-size: 45px;
+        color: $golden-logo ;
+        text-decoration: none;
+        padding: 0 55px;
+    }
+
     .nav-menu{
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-family: 'Montserrat';
+        
         
         .nav-item{
             // margin: 0 20px;
@@ -65,18 +52,72 @@ html {
             text-decoration: none;
         }
     }
-
-    .hamburger{
-        display: none;
-    }
-
-    .golden-logo {
-
-        font-family: 'Oleo Script', cursive;
-        font-size: 45px;
-        color: $golden-logo ;
-        text-decoration: none;
-        padding: 0 20px;
-    }
 }
 
+
+@media only screen and(max-width: 760px){
+    .nav-toggle-label{
+        display: block;
+    }
+    .navbar{
+        padding: 10px;
+        background: rgba($color: black, $alpha: .90);
+    }
+    
+    
+    .nav-menu{
+        transform: scale(1,0);
+        transition: transform .2s;
+        transform-origin: top;
+
+        li{
+            opacity: 0;
+            transition: opacity 150ms ease-in-out;
+        }
+    }
+
+    .nav-toggle:checked ~ .nav-menu{
+        // transform: scale(1,0);
+        transform:  scale(1,1);
+        
+        li{
+            opacity: 1;
+        }
+    }
+
+    .nav-toggle-label{
+        display: block;
+        margin-left: 2rem;
+        transform: scale(2);
+        color: white;
+    }
+  
+    .golden-logo {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+
+      }
+    .hero-text {
+        visibility: hidden;
+      }
+    .navbar {
+        position: relative;
+        align-items: center;
+        .nav-menu {
+            flex-direction: column;
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 100%;
+            top: 100%;
+           // transform: scale(1,0);
+
+            .nav-item {
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+    }
+}

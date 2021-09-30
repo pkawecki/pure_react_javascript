@@ -7,24 +7,25 @@
     <title>Golden webPage</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
     <!-- bootstrap -->
     <!-- <link rel="stylesheet" href=".\node_modules\bootstrap\dist\css\bootstrap-grid.min.css"> -->
-
     <!-- <link rel="application/json" href=".\node_modules\bootstrap\dist\css\bootstrap-grid.min.css.map"> -->
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="./sass/style.scss">
-
     <!-- fonts awesome -->
     <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
-
     <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+Display:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Noto+Sans+Display:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,regular,500,600,700,800,900"
+        rel="stylesheet">
     <!-- rules disabling -->
     <!-- [html-validate-disable aria-hidden] -->
 </head>
@@ -32,6 +33,10 @@
 <body>
     <header class="header-hero">
         <nav class="navbar">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <i class="fas fa-bars"></i>
+            </label>
             <a href="#" class="golden-logo">Golden</a>
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -50,42 +55,38 @@
                     <a href="#" class="nav-link">Contact</a>
                 </li>
             </ul>
-            <div class="hamburger">
-                <a href="#"><i class="fas fa-bars"></i></a>
-            </div>
         </nav>
-
-        <main class="hero-text">
+        <div class="hero-text">
             <span>Welcome To Our Store</span>
             <span>It's nice to meet you</span>
-            <button>Tell me more</button>
-        </main>
+            <button type="button"> Tell me more</button>
+        </div>
     </header>
     <div class="width-wrapper">
         <div class="container services">
-            <header id="main-header">
+            <header class="main-header">
                 <h1>Services</h1>
                 <p>Proin lacullis purus consequat sem cure</p>
             </header>
-            <div class="s-content" id="content1">
+            <div class="s-content content1">
                 <img src="./images/E-Commerce.png" alt="e-commerce">
                 <h2>E-commerce</h2>
-                <p>Proin iaculis purus consequat sem cure 
-                    digni ssim. Donec porttitora entum suscipit 
+                <p>Proin iaculis purus consequat sem cure
+                    digni ssim. Donec porttitora entum suscipit
                     aenean rhoncus posuere odio in tincidunt.</p>
             </div>
-            <div class="s-content" id="content2">
+            <div class="s-content content2">
                 <img class="img-icon" src="./images/Laptop.png" alt="e-commerce">
                 <h2>Web Service</h2>
-                <p>Proin iaculis purus consequat sem cure 
-                    digni ssim. Donec porttitora entum suscipit 
+                <p>Proin iaculis purus consequat sem cure
+                    digni ssim. Donec porttitora entum suscipit
                     aenean rhoncus posuere odio in tincidunt.</p>
             </div>
-            <div class="s-content" id="content3">
+            <div class="s-content content3">
                 <img class="img-icon" src="./images/Locked.png" alt="e-commerce">
                 <h2>Web Security</h2>
-                <p>Proin iaculis purus consequat sem cure 
-                    digni ssim. Donec porttitora entum suscipit 
+                <p>Proin iaculis purus consequat sem cure
+                    digni ssim. Donec porttitora entum suscipit
                     aenean rhoncus posuere odio in tincidunt.</p>
             </div>
         </div>
@@ -93,36 +94,36 @@
     <div class="color-wrapper">
         <div class="width-wrapper">
             <div class="container portfolio">
-                <header id="main-header">
+                <header class="main-header">
                     <h1>Our Portfolio</h1>
                     <p>Proin lacullis purus consequat sem cure</p>
                 </header>
-                <div class="s-content" id="content1">
+                <div class="s-content content1">
                     <img src="./images/ebony_ivory.png" alt="ebony_ivory">
-                    <h2>Ebony & Ivory</h2>
+                    <h2>Ebony &amp; Ivory</h2>
                     <p>Branding</p>
                 </div>
-                <div class="s-content" id="content2">
+                <div class="s-content content2">
                     <img src="./images/Smart Stationary.png" alt="Smart Stationary">
                     <h2>Smart Stationary</h2>
                     <p>Print design</p>
                 </div>
-                <div class="s-content" id="content3">
+                <div class="s-content content3">
                     <img src="./images/Clever Poster.png" alt="Clever Poster">
                     <h2>E-commerce</h2>
                     <p>Print design</p>
                 </div>
-                <div class="s-content" id="content4">
+                <div class="s-content content4">
                     <img src="./images/vinyl_record.png" alt="Clever Poster">
                     <h2>Vinyl Record</h2>
                     <p>Product Mockup</p>
                 </div>
-                <div class="s-content" id="content5">
+                <div class="s-content content5">
                     <img src="./images/treehouse template.png" alt="Clever Poster">
                     <h2>Treehouse template</h2>
                     <p>Web design</p>
                 </div>
-                <div class="s-content" id="content6">
+                <div class="s-content content6">
                     <img src="./images/burned_logo.png" alt="Clever Poster">
                     <h2>Burned Logo</h2>
                     <p>Branding</p>
@@ -133,12 +134,11 @@
     <footer>
         <span>© Copyright 2014 FreebiesXpress.com</span>
         <div class="social-media">
-            <a href="#"><i class="fab fa-twitter" /></a>
-            <a href="#"><i class="fab fa-facebook" /></a>
-            <a href="#"><i class="fab fa-pinterest" /></a>
-            <a href="#"><i class="fab fa-google-plus" /></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+            <a href="#"><i class="fab fa-google-plus"></i></a>
         </div>
-
     </footer>
 </body>
 

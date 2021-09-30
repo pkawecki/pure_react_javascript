@@ -50,7 +50,7 @@
     }
 }
 
-#main-header{
+.main-header{
     margin: 4rem 0 ;
     grid-area: main-header;
     
@@ -66,13 +66,13 @@
     }
 
 }
-#content1{
+.content1{
     grid-area: content1;
 }
-#content2{
+.content2{
     grid-area: content2;
 }
-#content3{
+.content3{
     grid-area: content3 ;
 }
 

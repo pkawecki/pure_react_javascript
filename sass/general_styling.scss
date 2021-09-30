@@ -1,0 +1,29 @@
+@import './globals.scss';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html {
+    font-size: 16px;
+}
+
+.color-wrapper {
+    background: $background-gray;
+}
+
+.width-wrapper {
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
+.header-hero {
+    background-image: url("../images/background.png");
+    background-size:cover;
+    // max-width: $max-width;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    height: 100vh;
+    // max-height: 400px;
+}
